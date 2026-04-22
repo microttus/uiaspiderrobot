@@ -3,7 +3,7 @@ import time
 
 PORT = "/dev/ttyACM0"
 OLD_ID = 24         # endre hvis servoen har annen nåværende ID
-NEW_ID = 23        # sett ønsket ny ID her
+NEW_ID = 1        # sett ønsket ny ID her
 
 TEST_POS_1 = 300    # 0-1000
 TEST_POS_2 = 700
