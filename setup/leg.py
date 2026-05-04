@@ -19,6 +19,9 @@ class Leg:
 
     def prepare_tibia(self, tibia_pos, move_time):
         self.tibia.move_time_wait_write(tibia_pos, move_time)
+    
+    def set_pos(self, coxa, femur, tibia=500, move_time=1.5):
+        self.prepare_all(coxa, femur, tibia, move_time)
 
     def read_coxa(self): #Lese posisjon
         return self.coxa.pos_read()
@@ -29,31 +32,81 @@ class Leg:
     
     def sitt(self):
         self.prepare_coxa(500, 1)
-        self.prepare_femur(300, 10)
-        self.prepare_tibia(500, 10)
+        self.prepare_femur(300, 5)
+        self.prepare_tibia(200, 5)
 
+    
+    #Stå opp
     def start1(self):
         self.prepare_coxa(500,1)
         self.prepare_femur(225,5)
         self.prepare_tibia(160,5)
 
     def start2(self):
-        self.prepare_femur(500,1)
-        self.prepare_tibia(500,1)
+        self.prepare_all(500, 500, 500, 5)
 
-    def SixSeven1(self):
-        self.prepare_femur(100,1)
+    #Jævlig høy!
+    def High(self):
+        self.prepare_femur(700,1)
+        self.prepare_tibia(600,1)
 
-    def SixSeven2(self):
-        self.prepare_femur(400,1)
+    #SixSeven
+    def SixSevenV1(self):
+        self.prepare_coxa(300,0.1)
+        self.prepare_femur(300,0.1)
+        self.prepare_tibia(600,1)
+    
+    def SixSevenV2(self):
+        self.prepare_coxa(300,0.1)
+        self.prepare_femur(200,0.1)
+        self.prepare_tibia(600,1)
+
+    def SixSevenH1(self):
+        self.prepare_coxa(700,0.1)
+        self.prepare_femur(200,0.1)
+        self.prepare_tibia(600,1)
+    
+    def SixSevenH2(self):
+        self.prepare_coxa(700,0.1)
+        self.prepare_femur(300,0.1)
+        self.prepare_tibia(600,1)
 
 
     #Altererende tetrapod-gange
-
-    def Bein1(self):
+    def HPos1(self):
         self.prepare_coxa(500,1)
-        self.prepare_femur(225,5)
-        self.prepare_tibia(160,5)
+        self.prepare_femur(400,0.01)
+    
+    def HPos2(self):
+        self.prepare_coxa(500,1)
+        self.prepare_femur(500,1)
+
+    def HPos3(self):
+        self.prepare_coxa(300,1)
+        self.prepare_femur(500,1)
+
+    def HPos4(self):
+        self.prepare_coxa(700,1)
+        self.prepare_femur(500,1)
+    
+    #Bein1: 1-4-2-3-1-4-2-3
+    #Bein4: 2-3-1-4-2-3-1-4
+    #Bein5: 1-3-2-4-1-3-2-4
+    #Bein8: 2-4-1-3-2-4-1-3
+    
+    def Pos3(self):
+        self.prepare_coxa(400,1)
+        self.prepare_femur(500,1)
+
+    def Pos4(self):
+        self.prepare_coxa(600,1)
+        self.prepare_femur(500,1)
+
+    #Bein2: 4-2-3-1-4-2-3-1
+    #Bein3: 3-1-4-2-3-1-4-2
+    #Bein6: 3-2-4-1-3-2-4-1
+    #Bein7: 4-1-3-2-4-1-3-2
+  
 
 
         
