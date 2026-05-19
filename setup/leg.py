@@ -82,11 +82,11 @@ class Leg:
         self.prepare_femur(500,1)
 
     def HPos3(self):
-        self.prepare_coxa(300,1)
+        self.prepare_coxa(396,1)
         self.prepare_femur(500,1)
 
     def HPos4(self):
-        self.prepare_coxa(700,1)
+        self.prepare_coxa(604,1)
         self.prepare_femur(500,1)
     
     #Bein1: 1-4-2-3-1-4-2-3
@@ -95,11 +95,11 @@ class Leg:
     #Bein8: 2-4-1-3-2-4-1-3
     
     def Pos3(self):
-        self.prepare_coxa(400,1)
+        self.prepare_coxa(458,1)
         self.prepare_femur(500,1)
 
     def Pos4(self):
-        self.prepare_coxa(600,1)
+        self.prepare_coxa(542,1)
         self.prepare_femur(500,1)
 
     #Bein2: 4-2-3-1-4-2-3-1
