@@ -36,7 +36,7 @@ Kjerne = {
     4: "Pos4",
 }
 
-sequences = {
+sekvens = {
     0: [1, 4, 2, 3],  # Bein1
     1: [4, 3, 2, 1],  # Bein2
     2: [3, 1, 4, 2],  # Bein3
@@ -54,7 +54,7 @@ PHASE_DELAY = 0.6   # litt mer enn move_time
 
 def apply_phase(phase_index):
     for i, leg in enumerate(legs):
-        pose_number = sequences[i][phase_index]
+        pose_number = sekvens[i][phase_index]
 
         if i in HJØRNE_BEIN:
             method_name = Hjørne[pose_number]
